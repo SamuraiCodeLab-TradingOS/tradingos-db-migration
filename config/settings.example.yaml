@@ -1,0 +1,20 @@
+# TradingOS Configuration (Example/Dummy Data)
+# WARNING: DO NOT put real broker credentials or active logic here.
+
+system:
+  environment: "simulation"
+  version: "1.0.0"
+  max_threads: 4
+
+trading_logic:
+  active_ea: ["Jiro_Mock", "Nami_Mock"]
+  risk_management:
+    max_drawdown_percent: 5.0
+    daily_loss_limit: 1000
+  magic_numbers:
+    - 999901
+    - 999902
+
+api_layer:
+  endpoint: "http://localhost:8000"
+  timeout_ms: 500
